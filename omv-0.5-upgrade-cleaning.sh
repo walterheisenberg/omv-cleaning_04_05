@@ -14,7 +14,7 @@
 # - added purging of the website plugin and omv-plugins.org
 # - added moving millers.list because the containing linux-mint entries it gave errors with OMV 0.5 
 # - added removing other stuff from http://forums.openmediavault.org/viewtopic.php?f=14&t=2262&start=10#p15824
-# - moved from sh to bash -> should resolve some errors with [[ ]]
+# - moved from sh to bash -> should resolve some errors with [[ ]] - changed it to single [
 # - added code to get local.list back
 ###########################################################################################
 ### Variables
@@ -56,13 +56,13 @@ echo
 whiptail --title "${TITLE}" --backtitle "${BACKTITLE}" --msgbox "This script will clean your OMV-Installation, so that you can upgrade from 0.4 to 0.5\n\nPlease read the following instructions carefully!" 11 78
 
 whiptail --title "${TITLE}" --backtitle "${BACKTITLE}" --yesno --defaultno "To clean up your OMV-installation, the following steps are required:\n1. remove all external plugins.\n   The config is still there\n2. rename *.js-files in $OMV_DOCUMENTROOT_DIR/js/omv/module and admin/\n3. move all *.deb files and local.list in $OMVAPT/\n4. move old-omvplugins.org-lists\n\nDo you want to do this?" 15 78
-[[ $? = 0 ]] || f_aborted
+[ $? = 0 ] || f_aborted
 
 whiptail --title "${TITLE}" --backtitle "${BACKTITLE}" --yesno --defaultno "You are using this script at your own risk!\n\nAre you ready to reinstall OMV if something goes wrong or this script isn't working as expected?" 11 78
-[[ $? = 0 ]] || f_aborted
+[ $? = 0 ] || f_aborted
 
 whiptail --title "${TITLE}" --backtitle "${BACKTITLE}" --yesno --defaultno "You know, what you are doing?\n\nLogfile is $OMVLOGFILE" 8 78
-[[ $? = 0 ]] || f_aborted
+[ $? = 0 ] || f_aborted
 
 f_log "Cleaning started - $SCRIPTDATE"
 f_log ""
