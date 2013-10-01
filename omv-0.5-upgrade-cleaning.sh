@@ -25,7 +25,9 @@
 # Sample - possible usefull variables
 # OMV_DPKGARCHIVE_DIR="/var/cache/openmediavault/archives"
 # OMV_DOCUMENTROOT_DIR="/var/www/openmediavault"
-# OMV_CACHE_DIR="/var/cache/openmediavault"
+
+# Set variable - it's not available in 0.4 but in 0.5
+OMV_CACHE_DIR="/var/cache/openmediavault"
 
 SCRIPTDATE="$(date +%y%m%d-%H%M%S)"
 TITLE="Clean OMV to upgrade from 0.4 to 0.5"
