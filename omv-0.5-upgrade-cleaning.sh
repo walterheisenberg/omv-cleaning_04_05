@@ -2,7 +2,7 @@
 ## Cleaning script to update OMV savely from 0.4 to 0.5
 
 # R. Lindlein aka Solo0815 in the OMV-Forums
-# v 0.8.0
+# v 0.8.1
 
 # Bugs fixed / features added:
 # - typo
